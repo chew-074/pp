@@ -1,0 +1,82 @@
+@import "compass/css3";
+
+
+
+section {
+  background: #eee;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.module {
+  
+  position: relative;
+  float: left;
+  padding: 20px;
+  margin-right: 4%;
+  margin-bottom: 4%;
+ 
+  box-shadow: 0 1px 3px rgba(black, 0.2);
+  font-family: serif;
+  font-size: 18px;
+}
+
+
+ 
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s;
+}
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 2fr 1fr;
+}
+.main {
+  background:white;
+}
+.side {
+  background: white;
+  color: black;
+  margin-top: 50%;
+}
+@media (min-width: 320px) and (max-width: 768px){
+  .side{
+    margin-top: 0;
+  }
+}
+.main,
+.side {
+  padding: 2%;
+  border-radius: 10px
+}
+
+@media(max-width: 400px){
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.jk{
+  width: 100%;
+}
+.pp{
+  width: 2%;
+}
+@media (min-width: 320px) and (max-width: 768px){
+  .pp{
+    width: 8%;
+  }
+}
